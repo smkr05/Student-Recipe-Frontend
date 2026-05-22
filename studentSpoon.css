@@ -41,6 +41,12 @@ footer {
     align-items: center;
 }
 
+.recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
 @media (max-width: 600px) {
     header{
         flex-direction: column;
