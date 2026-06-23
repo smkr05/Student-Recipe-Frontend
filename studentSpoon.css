@@ -1,8 +1,14 @@
 :root {
-    --primary-color: #8A7FFF;
+    --primary-color: #52FF6C;
     --white: #FFFFFF;
     --background-color: #FEFAE0;
     --text-color: #333333;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
