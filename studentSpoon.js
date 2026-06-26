@@ -185,3 +185,57 @@ document.addEventListener("DOMContentLoaded", function () {
     saveSelectedRecipe();
     loadRecipePage();
 });
+
+function saveSelectedRecipe() {
+    const recipeCards = document.querySelectorAll("[data-recipe-id]");
+
+    recipeCards.forEach(function (card) {
+        card.addEventListener("click", function () {
+            const recipeId = card.getAttribute("data-recipe-id");
+            localStorage.setItem("selectedRecipe", recipeId);
+        });
+    });
+}
+
+function loadRecipePage() {
+    const titleElement = document.getElementById("recipeTitle");
+
+    if (!titleElement) {
+        return;
+    }
+
+    const selectedRecipeId = localStorage.getItem("selectedRecipe") || "homemade-cookies";
+
+    const selectedRecipe = recipes.find(function (recipe) {
+        return recipe.id === selectedRecipeId;
+    });
+
+    if (!selectedRecipe) {
+        return;
+    }
+
+    document.getElementById("recipeImage").src = selectedRecipe.image;
+    document.getElementById("recipeImage").alt = selectedRecipe.title;
+    document.getElementById("recipeTitle").textContent = selectedRecipe.title;
+    document.getElementById("recipeRating").textContent = selectedRecipe.rating;
+    document.getElementById("recipeCost").textContent = selectedRecipe.cost;
+    document.getElementById("recipeDescription").textContent = selectedRecipe.description;
+
+    const ingredientsList = document.getElementById("recipeIngredients");
+    const methodList = document.getElementById("recipeMethod");
+
+    ingredientsList.innerHTML = "";
+    methodList.innerHTML = "";
+
+    selectedRecipe.ingredients.forEach(function (ingredient) {
+        const listItem = document.createElement("li");
+        listItem.textContent = ingredient;
+        ingredientsList.appendChild(listItem);
+    });
+
+    selectedRecipe.method.forEach(function (step) {
+        const listItem = document.createElement("li");
+        listItem.textContent = step;
+        methodList.appendChild(listItem);
+    });
+}
