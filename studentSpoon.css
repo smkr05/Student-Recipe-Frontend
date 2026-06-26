@@ -228,3 +228,13 @@ footer {
         text-align: center;
     }
 }
+
+@media (max-width: 600px) {
+    .recipe-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .recipe-page {
+        grid-template-columns: 1fr;
+    }
+}
