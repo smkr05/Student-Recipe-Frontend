@@ -64,6 +64,15 @@ footer {
     padding: 8px 12px;
 }
 
+.recipe-grid a {
+    color: black;
+    text-decoration: none;
+}
+
+.recipe-grid p {
+    padding-top: 20px;
+}
+
 .recipe-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
