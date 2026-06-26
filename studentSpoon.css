@@ -169,6 +169,54 @@ footer {
     line-height: 1.5;
 }
 
+.content-upload-container {
+    max-width: 742px;
+    margin: 38px auto 65px auto;
+    text-align: center;
+}
+
+.content-upload-container h2 {
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 38px;
+}
+
+.inputs {
+    margin-bottom: 20px;
+}
+
+.inputs label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.inputs input,
+.inputs textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.inputs textarea {
+    resize: vertical;
+    min-height: 165px;
+}
+
+.post-button {
+    margin-top: 8px;
+    background-color: #444444;
+    color: var(--white);
+    border: none;
+    border-radius: 9px;
+    width: 130px;
+    height: 50px;
+    font-size: 15px;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
 @media (max-width: 600px) {
     header{
         flex-direction: column;
