@@ -180,3 +180,8 @@ const recipes = [
         ]
     }
 ];
+
+document.addEventListener("DOMContentLoaded", function () {
+    saveSelectedRecipe();
+    loadRecipePage();
+});
