@@ -132,6 +132,34 @@ footer {
     margin-bottom: 30px;
 }
 
+/* About page layout */
+.about-container {
+    max-width: 742px;
+    margin: 38px auto 65px auto;
+    text-align: center;
+}
+
+/* About page heading */
+.about-container h1 {
+    text-align: center;
+    font-size: 17px;
+    margin-bottom: 38px;
+}
+
+/* About page image */
+.about-container img {
+    width: 300px;
+    height: 175px;
+    object-fit: cover;
+    margin: 0 auto 35px auto;
+}
+
+.about-container p {
+    text-align: left;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
 @media (max-width: 600px) {
     header{
         flex-direction: column;
